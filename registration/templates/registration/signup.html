@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Регистрация{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="header"></div>
+        <h2>Регистрация</h2>
+        {% if message %}
+            {{ message }}
+            <a href="/">Домой</a>
+        {% endif %}
+
+
+{#    {{  form.errors.as_ul }}#}
+
+        {% if form %}
+            <form action="{% url 'registration:signup' %}" method="post">
+                {% csrf_token %}
+{#                {% for k, v in form.error_messages.items %}#}
+{#                    <p>{{ v }}</p>#}
+{#                {% endfor %}#}
+                {#        <!--        <p>{{form.error_messages}}</p>-->#}
+                <p>Email: {{ form.email }}</p>
+                {{  form.email.errors }}
+                <p>Придумайте пароль: {{ form.password1 }}</p>
+                {{  form.password1.errors }}
+                <p>Подтверждение пароля: {{ form.password2 }}</p>
+                {{  form.password2.errors }}
+                <input type="submit" name="submit" value="ОК" />
+{#                <table>#}
+{#                {{ form.as_table }}#}
+{#                 <tr>#}
+{#                    <td></td>#}
+{#                    <td><input type="submit" name="submit" value="Register" /></td>#}
+{#                </tr>#}
+{#             </table>#}
+
+
+            </form>
+        {% endif %}
+
+    </div>
+{% endblock %}

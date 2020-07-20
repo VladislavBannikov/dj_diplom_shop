@@ -1,0 +1,24 @@
+[
+{
+ "model": "shop.product",
+ "pk": 1,
+ "fields": {
+  "name": "iPhone 7",
+  "image": "products/iphone7.webp",
+  "description": "good phone",
+  "section": 13,
+  "slug": "iphone-7"
+ }
+},
+{
+ "model": "shop.product",
+ "pk": 2,
+ "fields": {
+  "name": "Nexus 5x",
+  "image": "products/nexus5x.webp",
+  "description": "don't know",
+  "section": 13,
+  "slug": "nexus-5x"
+ }
+}
+]
