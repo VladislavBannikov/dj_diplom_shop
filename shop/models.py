@@ -1,5 +1,6 @@
 from django.contrib.sessions.models import Session
 from django.db import models
+from django.db.models import Sum
 from django.template.defaultfilters import slugify
 from mptt.models import MPTTModel, TreeForeignKey
 
@@ -7,8 +8,8 @@ from registration.models import User
 
 
 class Section(MPTTModel):
-    name = models.CharField(max_length=255, blank=False, unique=True, verbose_name="Раздел")
-    slug = models.SlugField(max_length=255, blank=True, unique=True, verbose_name='URL')
+    name = models.CharField(max_length=255, blank=False, unique=True, verbose_name="Section name")
+    slug = models.SlugField(max_length=255, blank=True, unique=True, verbose_name='Slug')
     parent = TreeForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='children')
 
     class MPTTMeta:
@@ -28,14 +29,14 @@ class Product(models.Model):
 
     description = models.TextField(verbose_name="Описание")
     section = models.ForeignKey(Section, on_delete=models.CASCADE, related_name="products")
-    slug = models.SlugField(max_length=255, blank=True, unique=True, verbose_name='URL')
+    slug = models.SlugField(max_length=255, blank=True, unique=True, verbose_name='Slug')
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
         super(Product, self).save(*args, **kwargs)
 
     def __str__(self):
-        return self.slug
+        return self.name
 
 
 class Cart(models.Model):
@@ -53,3 +54,10 @@ class OrderItems(models.Model):
 class Order(models.Model):
     date = models.DateField(null=False, verbose_name="Order date")
     user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Customer')
+
+    def __str__(self):
+        return f"{self.user.email} - {self.date}"
+
+    def get_items_count(self):
+        return self.items.aggregate(sum=Sum('count')).get('sum')
+
