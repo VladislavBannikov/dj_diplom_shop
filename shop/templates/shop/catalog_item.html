@@ -1,0 +1,17 @@
+{% load static %}
+
+<h2>{{ product.name }}</h2>
+
+<a href="{% url "shop:product_view" product_slug=product.slug %}">
+    <img src="{% get_media_prefix %}{{ product.image }}" width="180" alt="{{ product.name }}">
+</a>
+
+<form action="{% url "shop:add_to_cart_view" %}" method="post">
+    {% csrf_token %}
+    <input type="hidden" name="product_slug" value="{{ product.slug }}">
+    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+    {% if 'page' in request.GET %}
+        <input type="hidden" name="redirect_page" value="{{ request.GET.page }}">
+    {% endif %}
+    <input type="submit" class="btn btn-secondary mt-2" value="Add to cart »">
+</form>

@@ -1,12 +1,12 @@
 {% if request.user.is_anonymous %}
     <a class="btn btn-outline-success my-2 my-sm-0" role="button"
        href="{% url "registration:login" %}">
-        Войти</a>
+        Login</a>
     <a class="btn btn-outline-success my-2 my-sm-0" role="button"
        href="{% url "registration:signup" %}">
-        Регистрация</a>
+        Registration</a>
 {% else %}
     <a class="btn btn-outline-success my-2 my-sm-0" role="button"
        href="{% url "registration:logout" %}">
-        Выйти ({{ request.user.email }})</a>
+        Exit ({{ request.user.email }})</a>
 {% endif %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}{% load static %}
+
+{% block content %}
+
+    <div class="container mb-5">
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="col-md-12">
+            <h2>{{ article.title }}</h2>
+            {{ article.published_at }} <br/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <img class="card-img-top" src="{% get_media_prefix %}{{ article.image }}" alt="">
+            </div>
+        </div>
+        <div class="row">
+            {{ article.text|safe }} <br/>
+        </div>
+    </div>
+
+{% endblock content %}

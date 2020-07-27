@@ -18,14 +18,15 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
 
-# from .view import index
+from .view import main_page
 
 urlpatterns = [
                   path('admin/', admin.site.urls),
-                  path("", include(("articles.urls", "articles"), namespace='articles')),
+                  path("", main_page, name="main_page_view"),
                   # path("", index, name=index),
 
                   path("shop/", include(("shop.urls", 'shop'), namespace='shop')),
+                  path("articles/", include(("articles.urls", 'articles'), namespace='articles')),
                   path("reg/", include(("registration.urls", "registration"), namespace='registration')),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

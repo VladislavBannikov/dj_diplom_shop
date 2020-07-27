@@ -1,4 +1,6 @@
+from ckeditor.fields import RichTextField
 from django.contrib.sessions.models import Session
+from django.core.exceptions import ValidationError
 from django.db import models
 from django.db.models import Sum
 from django.template.defaultfilters import slugify
@@ -27,7 +29,7 @@ class Product(models.Model):
     name = models.CharField(max_length=255, blank=False, verbose_name="Товар")
     image = models.ImageField(upload_to="products", verbose_name="Изображение")
 
-    description = models.TextField(verbose_name="Описание")
+    description = RichTextField(verbose_name="Описание")
     section = models.ForeignKey(Section, on_delete=models.CASCADE, related_name="products")
     slug = models.SlugField(max_length=255, blank=True, unique=True, verbose_name='Slug')
 
@@ -39,10 +41,13 @@ class Product(models.Model):
         return self.name
 
 
+
+
 class Cart(models.Model):
-    session = models.ForeignKey(Session, on_delete=models.CASCADE, related_name="cart")
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="cart")
-    count = models.PositiveIntegerField(default=0, null=False, verbose_name='Count')
+    pass
+#     session = models.ForeignKey(Session, on_delete=models.CASCADE, related_name="cart")
+#     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="cart")
+#     count = models.PositiveIntegerField(default=0, null=False, verbose_name='Count')
 
 
 class OrderItems(models.Model):

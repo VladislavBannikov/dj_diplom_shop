@@ -1,5 +1,7 @@
 {% load mptt_tags %}
 {% load static %}
+
+{#====recursive tree example========#}
 {#    <ul class="root">#}
 {#                {% recursetree menu %}#}
 {#                    <li class="nav-item" >#}
@@ -14,8 +16,8 @@
 {#            </ul>#}
 
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="./index.html">Просто магазин</a>
-    <img src="./static/logo.svg" alt="" width="42" height="42">
+    <a class="navbar-brand" href="/">Simple shop</a>
+    <img src="{% static "logo.svg" %}" alt="" width="42" height="42">
     <button class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -25,69 +27,59 @@
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="{% url 'articles:articles_view' %}">
-                    Главная</a>
+                <a class="nav-link" href="{% url 'main_page_view' %}">
+                    Main page</a>
             </li>
 
+            {% recursetree menu %}
+                {% if node.is_root_node %}
+                    <li class="nav-item {% if not node.is_leaf_node %}dropdown{% endif %}">
+                        <a class="nav-link {% if not node.is_leaf_node %}dropdown-toggle{% endif %}"
+                                {% if not node.is_leaf_node %}
+                           href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                {% else %}
+                           href="{% url "shop:catalog_view" catalog_slug=node.slug %}"
+                                {% endif %}
+                        >
+                            {{ node.name }}</a>
 
-
-
-{#            <ul class="root">#}
-{#                {% recursetree menu %}#}
-{#                    <li>#}
-{#                        {{ node.name }}#}
-{#                        {% if not node.is_leaf_node %}#}
-{#                            <ul class="children">#}
-{#                                {{ children }}#}
-{#                            </ul>#}
-{#                        {% endif %}#}
-{#                    </li>#}
-{#                {% endrecursetree %}#}
-{#            </ul>#}
-
-{#            TODO: menu hierarchy doesn't work#}
-                {% recursetree menu %}
-                    <li class="nav-item {% if not node.is_leaf_node %} dropdown {% endif %}">
-{#                        {{ node.name }}#}
-                        <a class="nav-link" href="{% url "shop:catalog_view" catalog_slug=node.slug  %}">{{ node.name }}</a>
-
-                        {% if not node.is_leaf_node %}
-
-                            <div class="dropdown-menu" aria-labelledby="dropdown01">
-                                {{ children }}
-                            </div>
-
-                        {% endif %}
+                        <div class="dropdown-menu">
+                            {{ children }}
+                        </div>
                     </li>
-                {% endrecursetree %}
+                {% else %}
+                    <a class="dropdown-item" href="{% url "shop:catalog_view" catalog_slug=node.slug %}">
+                        {{ node.name }}</a>
+                {% endif %}
+            {% endrecursetree %}
 
-
-
-
-
-{#            <li class="nav-item dropdown">#}
-{#                <a class="nav-link dropdown-toggle" href="#" id="dropdown01"#}
-{#                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
-{#                    Гаджеты</a>#}
-{#                <div class="dropdown-menu" aria-labelledby="dropdown01">#}
-{##}
-{#                    <a class="dropdown-item" href="./smartphones.html">#}
-{#                        Сматрфоны</a>#}
-{##}
-{#                </div>#}
-{#            </li>#}
-{##}
-{##}
-{#            <li class="nav-item">#}
-{#                <a class="nav-link" href="./empty_section.html">#}
-{#                    Аксесcуары</a>#}
-{#            </li>#}
+            {#    ===========Menu Example======#}
+            {#             <li class="nav-item dropdown">#}
+            {#                <a class="nav-link dropdown-toggle" href="#"#}
+            {#                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
+            {#                    Гаджеты</a>#}
+            {#                <div class="dropdown-menu" >#}
+            {##}
+            {#                    <a class="dropdown-item" href="./smartphones.html">#}
+            {#                        Сматрфоны</a>#}
+            {##}
+            {#                    <a class="dropdown-item" href="./smartphones.html">#}
+            {#                        Сматрфоны2</a>#}
+            {##}
+            {#                </div>#}
+            {#            </li>#}
+            {#            <li class="nav-item">#}
+            {#                <a class="nav-link" href="./empty_section.html">#}
+            {#                    Аксесcуары</a>#}
+            {#            </li>#}
 
 
         </ul>
+
+
         <a class="btn btn-outline-success my-2 my-sm-0" role="button"
            href="{% url "shop:cart_view" %} ">
-            Корзина</a>
+            Shopping cart</a>
 
         {% include "registration/registration_menu.html" %}
 

@@ -38,6 +38,7 @@ INSTALLED_APPS = [
 
     'django_extensions',
     'mptt',
+    'ckeditor',
 
     'articles',
     'registration',
@@ -130,10 +131,20 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Full',
+    },
+}
+
+
 AUTH_USER_MODEL = 'registration.User'
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 
 INSTALLED_APPS = INSTALLED_APPS + ['debug_toolbar',]

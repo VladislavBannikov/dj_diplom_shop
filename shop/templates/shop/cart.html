@@ -6,15 +6,15 @@
         <div class="row">
             <div class="col-lg-6 col-md-9 col-sm-12 order-md-2 mb-4">
                 <h4 class="d-flex justify-content-between align-items-center mb-3">
-                    <span class="text-muted">Ваша корзина</span>
+                    <span class="text-muted">Your cart</span>
                     <span class="badge badge-secondary badge-pill">{{ sum|default_if_none:"0" }}</span>
                 </h4>
                 <ul class="list-group mb-3">
                     {% for item in items %}
                         <li class="list-group-item d-flex justify-content-between lh-condensed">
                             <div>
-                                <h6 class="my-0">{{ item.product.name }}</h6>
-                                <small class="text-muted">{{ item.product.description }}</small>
+                                <h6 class="my-0">{{ item.name }}</h6>
+{#                                <small class="text-muted">{{ item.desctiption }}</small>#}
                             </div>
                             <span class="text-muted">{{ item.count }}</span>
                         </li>
@@ -26,7 +26,7 @@
                 <form class="card p-2" action="{% url "shop:create_order_view" %}" method="post">
                     {% csrf_token %}
                     <button type="submit" class="btn btn-secondary" {% if not sum %}disabled{% endif %}>
-                        Заказать</button>
+                        Place order</button>
                 </form>
 
 

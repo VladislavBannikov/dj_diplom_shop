@@ -1,6 +1,6 @@
 .idea/
 *.pyc
-media/
+resources/
 
 settings_local.py
 db.sqlite3

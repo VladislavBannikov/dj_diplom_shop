@@ -27,27 +27,35 @@ def catalog_view(request, catalog_slug):
         paginator = Paginator(section.products.all(), PAGINATOR_ITEMS_PER_PAGE)
         paginator_catalog_slug = catalog_slug
 
-    cur_url = request.path
-
-    current_page_number = request.GET.get('page', 1)
-    current_page = paginator.get_page(current_page_number)
-    current_page_number = current_page.number
-    next_page_url = None
-    prev_page_url = None
-
-    if current_page.has_next():
-        next_page_url = f'{cur_url}?page={current_page.next_page_number()}'
-
-    if current_page.has_previous():
-        prev_page_url = f'{cur_url}?page={current_page.previous_page_number()}'
-
     context = {
-        'products': paginator.page(current_page_number).object_list,
         'section': section,
-        'current_page': current_page_number,
-        'prev_page_url': prev_page_url,
-        'next_page_url': next_page_url,
     }
+
+    if paginator.num_pages > 1:
+        cur_url = request.path
+
+        current_page_number = request.GET.get('page', 1)
+        current_page = paginator.get_page(current_page_number)
+        current_page_number = current_page.number
+        next_page_url = None
+        prev_page_url = None
+
+        if current_page.has_next():
+            next_page_url = f'{cur_url}?page={current_page.next_page_number()}'
+
+        if current_page.has_previous():
+            prev_page_url = f'{cur_url}?page={current_page.previous_page_number()}'
+
+        context.update({
+            'products': paginator.page(current_page_number).object_list,
+            'current_page': current_page_number,
+            'prev_page_url': prev_page_url,
+            'next_page_url': next_page_url,
+        })
+    else:
+        context.update({
+            'products': paginator.page(1).object_list,
+        })
 
     return render(request, template_name=template, context=context)
 
@@ -62,11 +70,18 @@ def product_view(request, product_slug):
 def cart_view(request):
     template = "shop/cart.html"
 
-    session_key = request.session.session_key
-    session = Session.objects.get(session_key=session_key)
-    items = Cart.objects.filter(session=session).select_related('product')
-    sum = items.aggregate(sum=Sum('count')).get('sum')
-    context = {"items": items, 'sum': sum}
+    # session_key = request.session.session_key
+    # session = Session.objects.get(session_key=session_key)
+    # items = Cart.objects.filter(session=session).select_related('product')
+    # sum = items.aggregate(sum=Sum('count')).get('sum')
+    # sum = 0
+
+    cart = dict(request.session.get('cart', {}))
+    sum_items = sum(cart.values())
+    items = Product.objects.filter(slug__in=cart.keys())
+    # TODO: what is the best way to add count from session cart to above QuerySet?
+
+    context = {"items": items, 'sum': sum_items}
 
     return render(request, template_name=template, context=context)
 
@@ -78,16 +93,11 @@ class AddToCartView(View):
     def post(self, request, *args, **kwargs):
         product_slug = request.POST.get('product_slug', None)
 
-        session_key = request.session.session_key
-        session = Session.objects.get(session_key=session_key)
-        product = Product.objects.get(slug=product_slug)
-
-        (product_in_cart, _) = Cart.objects.get_or_create(session=session, product=product)
-        # if product_in_cart is None:
-        #     product_in_cart = Cart(session=session, product=product, count=1)
-        # else:
-        product_in_cart.count += 1
-        product_in_cart.save()
+        cart = request.session.get('cart', {})
+        product_current_count = cart.get(product_slug, 0)
+        cart.update({product_slug: product_current_count + 1})
+        request.session['cart'] = cart
+        request.session.modified = True
 
         page_number = request.POST.get('redirect_page', 1)
         red = redirect(f"{request.POST.get('redirect_url')}?page={page_number}")
@@ -96,17 +106,17 @@ class AddToCartView(View):
 
 class CreateOrderView(View):
     def post(self, request, *args, **kwargs):
-        user = request.user
-        date = timezone.now()
-        order = Order.objects.create(user=user, date=date)
+        cart = dict(request.session.get('cart', {}))
+        if cart:
 
-        session_key = request.session.session_key
-        session = Session.objects.get(session_key=session_key)
-        items = Cart.objects.filter(session=session)
+            user = request.user
+            date = timezone.now()
+            order = Order.objects.create(user=user, date=date)
 
-        for item in items:
-            OrderItems.objects.create(product=item.product,count=item.count,order=order)
+            for product_in_cart_slug, count in cart.items():
+                OrderItems.objects.create(product=Product.objects.get(slug=product_in_cart_slug), count=count, order=order)
 
-        items.delete()
+            request.session['cart'] = {}
+
         red = redirect("/")
         return red

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-4">Welcome to the Simple shop</h1>
+            <p>Best shopping here:</p>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+    <h2>Three random products:</h2>
+        <div class="row">
+            {% for product in products %}
+                <div class="col-md-4">
+                    {% include "shop/catalog_item.html" %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+    <div class="jumbotron">
+        {% include "articles/articles.html" %}
+    </div>
+
+
+{% endblock content %}
