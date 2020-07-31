@@ -22,6 +22,12 @@ class OrderItemsAdmin(admin.TabularInline):
     model = OrderItems
 
 
+# class OrderSumAdmin(admin.TabularInline):
+#     # model = ["sdf","sdf"]
+#     model = None
+#     pass
+
+
 @admin.register(Order)
 class OrderAdmin(admin.ModelAdmin):
     list_display = ("user", "date", "items_count")
@@ -29,8 +35,7 @@ class OrderAdmin(admin.ModelAdmin):
 
     inlines = [OrderItemsAdmin, ]
 
+
     # to rename column in list view. Called get_items_count of Order object. Name to display - "items count"
     def items_count(self, obj):
-
         return obj.get_items_count()
-

@@ -1,31 +1,20 @@
-from collections import Counter
-from urllib.parse import urlencode, urlparse, urlunparse
-
-from django.contrib.sessions.models import Session
 from django.core.paginator import Paginator
-from django.db.models import Sum
-from django.shortcuts import redirect, render, render_to_response
-from django.urls import reverse
+from django.shortcuts import redirect, render
+
 from django.utils import timezone
 from django.views import View
 
-from .models import Cart, Order, OrderItems, Product, Section
+from .models import Order, OrderItems, Product, Section
 
 PAGINATOR_ITEMS_PER_PAGE = 6
 
-paginator_catalog_slug = ''
-paginator = None
-
 
 def catalog_view(request, catalog_slug):
-    global paginator
-    global paginator_catalog_slug
     template = "shop/catalog.html"
     section = Section.objects.get(slug=catalog_slug)
+    sections = section.get_descendants(include_self=True)
 
-    if paginator_catalog_slug != catalog_slug:
-        paginator = Paginator(section.products.all(), PAGINATOR_ITEMS_PER_PAGE)
-        paginator_catalog_slug = catalog_slug
+    paginator = Paginator(Product.objects.filter(section__in=sections), PAGINATOR_ITEMS_PER_PAGE)
 
     context = {
         'section': section,
@@ -70,25 +59,21 @@ def product_view(request, product_slug):
 def cart_view(request):
     template = "shop/cart.html"
 
-    # session_key = request.session.session_key
-    # session = Session.objects.get(session_key=session_key)
-    # items = Cart.objects.filter(session=session).select_related('product')
-    # sum = items.aggregate(sum=Sum('count')).get('sum')
-    # sum = 0
-
+    # cart is a dict with key=product_slug and value=count
     cart = dict(request.session.get('cart', {}))
+
     sum_items = sum(cart.values())
     items = Product.objects.filter(slug__in=cart.keys())
-    # TODO: what is the best way to add count from session cart to above QuerySet?
+    # add product_name to the cart variable
+    for i in items:
+        cart[i.slug] = {"product_name": i.name, "count": cart[i.slug]}
 
-    context = {"items": items, 'sum': sum_items}
+    context = {"items": cart, 'sum': sum_items}
 
     return render(request, template_name=template, context=context)
 
 
 class AddToCartView(View):
-    # form_class = CalcForm
-    # template_name = ""
 
     def post(self, request, *args, **kwargs):
         product_slug = request.POST.get('product_slug', None)
@@ -114,7 +99,8 @@ class CreateOrderView(View):
             order = Order.objects.create(user=user, date=date)
 
             for product_in_cart_slug, count in cart.items():
-                OrderItems.objects.create(product=Product.objects.get(slug=product_in_cart_slug), count=count, order=order)
+                OrderItems.objects.create(product=Product.objects.get(slug=product_in_cart_slug), count=count,
+                                          order=order)
 
             request.session['cart'] = {}
 

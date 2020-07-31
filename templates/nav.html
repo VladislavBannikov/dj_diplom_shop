@@ -36,7 +36,7 @@
                     <li class="nav-item {% if not node.is_leaf_node %}dropdown{% endif %}">
                         <a class="nav-link {% if not node.is_leaf_node %}dropdown-toggle{% endif %}"
                                 {% if not node.is_leaf_node %}
-                           href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                           href="{% url "shop:catalog_view" catalog_slug=node.slug %}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                                 {% else %}
                            href="{% url "shop:catalog_view" catalog_slug=node.slug %}"
                                 {% endif %}
@@ -52,28 +52,6 @@
                         {{ node.name }}</a>
                 {% endif %}
             {% endrecursetree %}
-
-            {#    ===========Menu Example======#}
-            {#             <li class="nav-item dropdown">#}
-            {#                <a class="nav-link dropdown-toggle" href="#"#}
-            {#                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
-            {#                    Гаджеты</a>#}
-            {#                <div class="dropdown-menu" >#}
-            {##}
-            {#                    <a class="dropdown-item" href="./smartphones.html">#}
-            {#                        Сматрфоны</a>#}
-            {##}
-            {#                    <a class="dropdown-item" href="./smartphones.html">#}
-            {#                        Сматрфоны2</a>#}
-            {##}
-            {#                </div>#}
-            {#            </li>#}
-            {#            <li class="nav-item">#}
-            {#                <a class="nav-link" href="./empty_section.html">#}
-            {#                    Аксесcуары</a>#}
-            {#            </li>#}
-
-
         </ul>
 
 
@@ -86,3 +64,4 @@
 
     </div>
 </nav>
+
