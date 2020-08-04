@@ -26,17 +26,13 @@
 
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="{% url 'main_page_view' %}">
-                    Main page</a>
-            </li>
-
             {% recursetree menu %}
                 {% if node.is_root_node %}
                     <li class="nav-item {% if not node.is_leaf_node %}dropdown{% endif %}">
                         <a class="nav-link {% if not node.is_leaf_node %}dropdown-toggle{% endif %}"
                                 {% if not node.is_leaf_node %}
-                           href="{% url "shop:catalog_view" catalog_slug=node.slug %}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                           href="{% url "shop:catalog_view" catalog_slug=node.slug %}" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false"
                                 {% else %}
                            href="{% url "shop:catalog_view" catalog_slug=node.slug %}"
                                 {% endif %}
@@ -50,6 +46,10 @@
                 {% else %}
                     <a class="dropdown-item" href="{% url "shop:catalog_view" catalog_slug=node.slug %}">
                         {{ node.name }}</a>
+{#                    <a class="dropdown-item" href="{% url "shop:catalog_view" catalog_slug=node.slug %}">#}
+{#                        {{ node.name }}#}
+{#                    </a>#}
+{#                    {{ children }}#}
                 {% endif %}
             {% endrecursetree %}
         </ul>

@@ -97,6 +97,14 @@
 },
 {
  "model": "sessions.session",
+ "pk": "74gpbk5xvj81572imrspuzz2ew9czshb",
+ "fields": {
+  "session_data": "N2NkZjg3ODc0ZWRjOWNmODY5Y2FkNTg4NzBkMDU5ZmJkMWQ1NGQ2Yjp7Il9hdXRoX3VzZXJfaWQiOiI3IiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI5Y2UwN2I4NWRiZWY5ZmFlNDk2YzZkODUxYjgwNjM1YWVlN2JkOGQwIiwiY2FydCI6e319",
+  "expire_date": "2020-08-18T19:46:28.868Z"
+ }
+},
+{
+ "model": "sessions.session",
  "pk": "7ew1i9oe9185ibuui61os4dbmc8fj9oz",
  "fields": {
   "session_data": "MmM2MTkxMmIzOGFlNmE4OTNiZGY4OWUxZmQ0ZGE4Y2RjZjI1NWFjODp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI4NTI4YmE5Mzg5NWE0ZGI2ZmEzNzE3NGE5ZWRlYTU4ZWQxYTkyZDRkIiwiY2FydCI6e319",
@@ -107,8 +115,8 @@
  "model": "sessions.session",
  "pk": "c992jwk5q43cqge6xnpmwmpt96d73b5m",
  "fields": {
-  "session_data": "ZWJmZTU3NGJkMzI1OTM3YTJlYTJmOWZlMDY5ZDZmMmZlODkxYjE5Nzp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI4NTI4YmE5Mzg5NWE0ZGI2ZmEzNzE3NGE5ZWRlYTU4ZWQxYTkyZDRkIn0=",
-  "expire_date": "2020-08-02T12:47:15.011Z"
+  "session_data": "MmM2MTkxMmIzOGFlNmE4OTNiZGY4OWUxZmQ0ZGE4Y2RjZjI1NWFjODp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI4NTI4YmE5Mzg5NWE0ZGI2ZmEzNzE3NGE5ZWRlYTU4ZWQxYTkyZDRkIiwiY2FydCI6e319",
+  "expire_date": "2020-08-18T19:46:31.282Z"
  }
 },
 {
@@ -278,66 +286,72 @@
  "model": "shop.product",
  "pk": 1,
  "fields": {
-  "name": "phone 1",
-  "image": "products/phone 1.png",
-  "description": "phone 1 test description phone 1",
+  "name": "ONEPLUS 5T",
+  "image": "products/OnePlus-5T-246.jpg",
+  "price": 100.0,
+  "description": "<table id=\"cputec\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>Operating system OS</td>\r\n\t\t\t<td>Android 7.1.1 (Nougat), upgradable to Android 9.0 (Pie); OxygenOS 5.1.4</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>Chipset</td>\r\n\t\t\t<td>- Qualcomm MSM8998 Snapdragon 835 (10 nm)</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td colspan=\"2\">Processor CPU</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td colspan=\"2\">- Octa-core (4x2.45 GHz Kryo &amp; 4x1.9 GHz Kryo)</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>Graphics processor GPU</td>\r\n\t\t\t<td colspan=\"2\">- Adreno 540</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>External memory</td>\r\n\t\t\t<td>No</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>Internal memory</td>\r\n\t\t\t<td>128 GB, 8 GB RAM 64 GB, 6 GB RAM</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>Antutu 8 score</td>\r\n\t\t\t<td>263919</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>Antutu 7 score</td>\r\n\t\t\t<td>212387</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>GeekBench 5 Single Core</td>\r\n\t\t\t<td>383</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>GeekBench 5 Multi-Core</td>\r\n\t\t\t<td>1655</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>GeekBench 4 Single Core</td>\r\n\t\t\t<td>1941</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>GeekBench 4 Multi-Core</td>\r\n\t\t\t<td>6612</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>GeekBench 4 RenderScript</td>\r\n\t\t\t<td>7859</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>GeekBench 4 Battery</td>\r\n\t\t\t<td>3936</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>",
   "section": 4,
-  "slug": "phone-1"
+  "slug": "oneplus-5t"
  }
 },
 {
  "model": "shop.product",
  "pk": 2,
  "fields": {
-  "name": "phone 2",
-  "image": "products/phone 2.png",
-  "description": "phone 2 test description phone 2",
+  "name": "HUAWEI P40 PRO+",
+  "image": "products/Huawei--P40-Pro-499.jpg",
+  "price": 300.0,
+  "description": "<table id=\"cputec\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>Operating system OS</td>\r\n\t\t\t<td>Android 10.0 (AOSP + HMS); EMUI 10.1</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>Chipset</td>\r\n\t\t\t<td>- HiSilicon Kirin 990 5G (7 nm+)</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td colspan=\"2\">Processor CPU</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td colspan=\"2\">- Octa-core (2x2.86 GHz Cortex-A76 &amp; 2x2.36 GHz Cortex-A76 &amp; 4x1.95 GHz Cortex-A55)</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>Graphics processor GPU</td>\r\n\t\t\t<td colspan=\"2\">- Mali-G76 MP16</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>External memory</td>\r\n\t\t\t<td>NM (Nano Memory), up to 256GB (uses shared SIM slot)</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>Internal memory</td>\r\n\t\t\t<td>256GB 8GB RAM, 512GB 8GB RAM</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>Antutu 8 score</td>\r\n\t\t\t<td>493316</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>GeekBench 5 Single Core</td>\r\n\t\t\t<td>776</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>GeekBench 5 Multi-Core</td>\r\n\t\t\t<td>3183</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>",
   "section": 4,
-  "slug": "phone-2"
+  "slug": "huawei-p40-pro"
  }
 },
 {
  "model": "shop.product",
  "pk": 3,
  "fields": {
-  "name": "phone 3",
-  "image": "products/phone 3.png",
-  "description": "phone 3 test description phone 3",
+  "name": "XIAOMI MI A3",
+  "image": "products/Xiaomi--Mi-A3-838.jpg",
+  "price": 500.0,
+  "description": "<table id=\"cputec\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>Operating system OS</td>\r\n\t\t\t<td>Android 9.0 (Pie); Android One</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>Chipset</td>\r\n\t\t\t<td>- Qualcomm SDM665 Snapdragon 665 (11 nm)</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td colspan=\"2\">Processor CPU</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td colspan=\"2\">- Octa-core (2x2.0 GHz Kryo 260 Gold &amp; 6x1.8 GHz Kryo 260 Silver)</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>Graphics processor GPU</td>\r\n\t\t\t<td colspan=\"2\">- Adreno 610</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>External memory</td>\r\n\t\t\t<td>microSD, up to 256 GB (uses shared SIM slot)</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>Internal memory</td>\r\n\t\t\t<td>64/128 GB, 4 GB RAM</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>Antutu 8 score</td>\r\n\t\t\t<td>177109</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>Antutu 7 score</td>\r\n\t\t\t<td>142658</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>GeekBench 5 Single Core</td>\r\n\t\t\t<td>312</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>GeekBench 5 Multi-Core</td>\r\n\t\t\t<td>1357</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>GeekBench 4 Single Core</td>\r\n\t\t\t<td>1501</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>GeekBench 4 Multi-Core</td>\r\n\t\t\t<td>5662</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>",
   "section": 4,
-  "slug": "phone-3"
+  "slug": "xiaomi-mi-a3"
  }
 },
 {
  "model": "shop.product",
  "pk": 4,
  "fields": {
-  "name": "phone 4",
-  "image": "products/phone 4.png",
-  "description": "phone 4 test description phone 4",
+  "name": "APPLE IPHONE 8 PLUS",
+  "image": "products/Apple-iPhone-8-Plus-877.jpg",
+  "price": 400.0,
+  "description": "<table id=\"cputec\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>Operating system OS</td>\r\n\t\t\t<td>iOS 11, upgradable to iOS 12.1.3</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>Chipset</td>\r\n\t\t\t<td>- Apple A11 Bionic (10 nm)</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td colspan=\"2\">Processor CPU</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td colspan=\"2\">- Hexa-core (2x Monsoon + 4x Mistral)</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>Graphics processor GPU</td>\r\n\t\t\t<td colspan=\"2\">- Apple GPU (three-core graphics)</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>External memory</td>\r\n\t\t\t<td>No</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>Internal memory</td>\r\n\t\t\t<td>64/256 GB, 3 GB RAM</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>Antutu 8 score</td>\r\n\t\t\t<td>305167</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>Antutu 7 score</td>\r\n\t\t\t<td>232145</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>GeekBench 4 Single Core</td>\r\n\t\t\t<td>4224</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>GeekBench 4 Multi-Core</td>\r\n\t\t\t<td>10193</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>GeekBench 4 Battery</td>\r\n\t\t\t<td>2842</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>",
   "section": 4,
-  "slug": "phone-4"
+  "slug": "apple-iphone-8-plus"
  }
 },
 {
  "model": "shop.product",
  "pk": 5,
  "fields": {
-  "name": "phone 5",
-  "image": "products/phone 5.png",
-  "description": "phone 5 test description phone 5",
+  "name": "VIVO Z1",
+  "image": "products/vivo-Z1-742.jpg",
+  "price": 100.0,
+  "description": "<table id=\"cputec\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>Operating system OS</td>\r\n\t\t\t<td>Android 8.1 (Oreo); Funtouch 4</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>Chipset</td>\r\n\t\t\t<td>- Qualcomm SDM660 Snapdragon 660 (14 nm)</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td colspan=\"2\">Processor CPU</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td colspan=\"2\">- Octa-core (4x2.2 GHz Kryo 260 &amp; 4x1.8 GHz Kryo 260)</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>Graphics processor GPU</td>\r\n\t\t\t<td colspan=\"2\">- Adreno 512</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>External memory</td>\r\n\t\t\t<td>microSD, up to 256 GB (uses SIM 2 slot)</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>Internal memory</td>\r\n\t\t\t<td>64 GB, 4 GB RAM</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>Antutu 7 score</td>\r\n\t\t\t<td>136205</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>GeekBench 4 Single Core</td>\r\n\t\t\t<td>1626</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>GeekBench 4 Multi-Core</td>\r\n\t\t\t<td>5853</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>",
   "section": 4,
-  "slug": "phone-5"
+  "slug": "vivo-z1"
  }
 },
 {
  "model": "shop.product",
  "pk": 6,
  "fields": {
-  "name": "phone 6",
-  "image": "products/phone 6.png",
-  "description": "phone 6 test description phone 6",
+  "name": "TECNO POUVOIR 4 PRO",
+  "image": "products/TECNO--Pouvoir-4-Pro-303.jpg",
+  "price": 367.0,
+  "description": "<table id=\"cputec\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>Operating system OS</td>\r\n\t\t\t<td>Android 10, HIOS 6.0</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>Chipset</td>\r\n\t\t\t<td>- Mediatek MT6762 Helio P22 (12 nm)</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td colspan=\"2\">Processor CPU</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td colspan=\"2\">- Octa-core (4x2.0 GHz &amp; 4x1.5 GHz)</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>Graphics processor GPU</td>\r\n\t\t\t<td colspan=\"2\">- PowerVR GE8320</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>External memory</td>\r\n\t\t\t<td>microSDXC (dedicated slot)</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>Internal memory</td>\r\n\t\t\t<td>64GB 4GB RAM, 128GB 6GB RAM</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>",
   "section": 4,
-  "slug": "phone-6"
+  "slug": "tecno-pouvoir-4-pro"
  }
 },
 {
@@ -346,6 +360,7 @@
  "fields": {
   "name": "phone 7",
   "image": "products/phone 7.png",
+  "price": 1.0,
   "description": "phone 7 test description phone 7",
   "section": 4,
   "slug": "phone-7"
@@ -357,6 +372,7 @@
  "fields": {
   "name": "phone 8",
   "image": "products/phone 8.png",
+  "price": 1.0,
   "description": "phone 8 test description phone 8",
   "section": 4,
   "slug": "phone-8"
@@ -368,6 +384,7 @@
  "fields": {
   "name": "phone 9",
   "image": "products/phone 9.png",
+  "price": 1.0,
   "description": "phone 9 test description phone 9",
   "section": 4,
   "slug": "phone-9"
@@ -379,6 +396,7 @@
  "fields": {
   "name": "phone 10",
   "image": "products/phone 10.png",
+  "price": 200.0,
   "description": "phone 10 test description phone 10",
   "section": 4,
   "slug": "phone-10"
@@ -390,6 +408,7 @@
  "fields": {
   "name": "phone 11",
   "image": "products/phone 11.png",
+  "price": 1.0,
   "description": "phone 11 test description phone 11",
   "section": 4,
   "slug": "phone-11"
@@ -401,6 +420,7 @@
  "fields": {
   "name": "phone 12",
   "image": "products/phone 12.png",
+  "price": 1.0,
   "description": "phone 12 test description phone 12",
   "section": 4,
   "slug": "phone-12"
@@ -412,6 +432,7 @@
  "fields": {
   "name": "phone 13",
   "image": "products/phone 13.png",
+  "price": 1.0,
   "description": "phone 13 test description phone 13",
   "section": 4,
   "slug": "phone-13"
@@ -423,6 +444,7 @@
  "fields": {
   "name": "phone 14",
   "image": "products/phone 14.png",
+  "price": 1.0,
   "description": "phone 14 test description phone 14",
   "section": 4,
   "slug": "phone-14"
@@ -434,6 +456,7 @@
  "fields": {
   "name": "phone 15",
   "image": "products/phone 15.png",
+  "price": 1.0,
   "description": "phone 15 test description phone 15",
   "section": 4,
   "slug": "phone-15"
@@ -445,6 +468,7 @@
  "fields": {
   "name": "phone 16",
   "image": "products/phone 16.png",
+  "price": 1.0,
   "description": "phone 16 test description phone 16",
   "section": 4,
   "slug": "phone-16"
@@ -456,6 +480,7 @@
  "fields": {
   "name": "phone 17",
   "image": "products/phone 17.png",
+  "price": 1.0,
   "description": "phone 17 test description phone 17",
   "section": 4,
   "slug": "phone-17"
@@ -467,6 +492,7 @@
  "fields": {
   "name": "phone 18",
   "image": "products/phone 18.png",
+  "price": 1.0,
   "description": "phone 18 test description phone 18",
   "section": 4,
   "slug": "phone-18"
@@ -478,6 +504,7 @@
  "fields": {
   "name": "phone 19",
   "image": "products/phone 19.png",
+  "price": 1.0,
   "description": "phone 19 test description phone 19",
   "section": 4,
   "slug": "phone-19"
@@ -489,6 +516,7 @@
  "fields": {
   "name": "watch 1",
   "image": "products/watch 1.png",
+  "price": 1.0,
   "description": "watch 1 test description watch 1",
   "section": 6,
   "slug": "watch-1"
@@ -500,6 +528,7 @@
  "fields": {
   "name": "watch 2",
   "image": "products/watch 2.png",
+  "price": 1.0,
   "description": "watch 2 test description watch 2",
   "section": 6,
   "slug": "watch-2"
@@ -511,6 +540,7 @@
  "fields": {
   "name": "case 1",
   "image": "products/case 1.png",
+  "price": 1.0,
   "description": "case 1 test description case 1",
   "section": 10,
   "slug": "case-1"
@@ -522,6 +552,7 @@
  "fields": {
   "name": "case 2",
   "image": "products/case 2.png",
+  "price": 1.0,
   "description": "case 2 test description case 2",
   "section": 10,
   "slug": "case-2"
@@ -533,6 +564,7 @@
  "fields": {
   "name": "case 3",
   "image": "products/case 3.png",
+  "price": 1.0,
   "description": "case 3 test description case 3",
   "section": 10,
   "slug": "case-3"
@@ -544,6 +576,7 @@
  "fields": {
   "name": "case 4",
   "image": "products/case 4.png",
+  "price": 1.0,
   "description": "case 4 test description case 4",
   "section": 10,
   "slug": "case-4"
@@ -555,6 +588,7 @@
  "fields": {
   "name": "case 5",
   "image": "products/case 5.png",
+  "price": 1.0,
   "description": "case 5 test description case 5",
   "section": 10,
   "slug": "case-5"
@@ -566,6 +600,7 @@
  "fields": {
   "name": "case 6",
   "image": "products/case 6.png",
+  "price": 1.0,
   "description": "case 6 test description case 6",
   "section": 10,
   "slug": "case-6"
@@ -577,6 +612,7 @@
  "fields": {
   "name": "case 7",
   "image": "products/case 7.png",
+  "price": 1.0,
   "description": "case 7 test description case 7",
   "section": 10,
   "slug": "case-7"
@@ -588,6 +624,7 @@
  "fields": {
   "name": "case 8",
   "image": "products/case 8.png",
+  "price": 1.0,
   "description": "case 8 test description case 8",
   "section": 10,
   "slug": "case-8"
@@ -599,6 +636,7 @@
  "fields": {
   "name": "case 9",
   "image": "products/case 9.png",
+  "price": 1.0,
   "description": "case 9 test description case 9",
   "section": 10,
   "slug": "case-9"
@@ -610,6 +648,7 @@
  "fields": {
   "name": "case 10",
   "image": "products/case 10.png",
+  "price": 1.0,
   "description": "case 10 test description case 10",
   "section": 10,
   "slug": "case-10"
@@ -621,6 +660,7 @@
  "fields": {
   "name": "case 11",
   "image": "products/case 11.png",
+  "price": 1.0,
   "description": "case 11 test description case 11",
   "section": 10,
   "slug": "case-11"
@@ -632,6 +672,7 @@
  "fields": {
   "name": "case 12",
   "image": "products/case 12.png",
+  "price": 1.0,
   "description": "case 12 test description case 12",
   "section": 10,
   "slug": "case-12"
@@ -643,6 +684,7 @@
  "fields": {
   "name": "case 13",
   "image": "products/case 13.png",
+  "price": 1.0,
   "description": "case 13 test description case 13",
   "section": 10,
   "slug": "case-13"
@@ -654,6 +696,7 @@
  "fields": {
   "name": "case 14",
   "image": "products/case 14.png",
+  "price": 1.0,
   "description": "case 14 test description case 14",
   "section": 10,
   "slug": "case-14"
@@ -665,6 +708,7 @@
  "fields": {
   "name": "case 15",
   "image": "products/case 15.png",
+  "price": 1.0,
   "description": "case 15 test description case 15",
   "section": 10,
   "slug": "case-15"
@@ -676,6 +720,7 @@
  "fields": {
   "name": "case 16",
   "image": "products/case 16.png",
+  "price": 1.0,
   "description": "case 16 test description case 16",
   "section": 10,
   "slug": "case-16"
@@ -687,6 +732,7 @@
  "fields": {
   "name": "case 17",
   "image": "products/case 17.png",
+  "price": 1.0,
   "description": "case 17 test description case 17",
   "section": 10,
   "slug": "case-17"
@@ -698,6 +744,7 @@
  "fields": {
   "name": "case 18",
   "image": "products/case 18.png",
+  "price": 1.0,
   "description": "case 18 test description case 18",
   "section": 10,
   "slug": "case-18"
@@ -709,6 +756,7 @@
  "fields": {
   "name": "case 19",
   "image": "products/case 19.png",
+  "price": 1.0,
   "description": "case 19 test description case 19",
   "section": 10,
   "slug": "case-19"
@@ -720,6 +768,7 @@
  "fields": {
   "name": "case 20",
   "image": "products/case 20.png",
+  "price": 1.0,
   "description": "case 20 test description case 20",
   "section": 10,
   "slug": "case-20"
@@ -731,6 +780,7 @@
  "fields": {
   "name": "case 21",
   "image": "products/case 21.png",
+  "price": 1.0,
   "description": "case 21 test description case 21",
   "section": 10,
   "slug": "case-21"
@@ -742,6 +792,7 @@
  "fields": {
   "name": "case 22",
   "image": "products/case 22.png",
+  "price": 1.0,
   "description": "case 22 test description case 22",
   "section": 10,
   "slug": "case-22"
@@ -753,6 +804,7 @@
  "fields": {
   "name": "case 23",
   "image": "products/case 23.png",
+  "price": 1.0,
   "description": "case 23 test description case 23",
   "section": 10,
   "slug": "case-23"
@@ -764,6 +816,7 @@
  "fields": {
   "name": "case 24",
   "image": "products/case 24.png",
+  "price": 1.0,
   "description": "case 24 test description case 24",
   "section": 10,
   "slug": "case-24"
@@ -775,6 +828,7 @@
  "fields": {
   "name": "case 25",
   "image": "products/case 25.png",
+  "price": 1.0,
   "description": "case 25 test description case 25",
   "section": 10,
   "slug": "case-25"
@@ -786,6 +840,7 @@
  "fields": {
   "name": "case 26",
   "image": "products/case 26.png",
+  "price": 1.0,
   "description": "case 26 test description case 26",
   "section": 10,
   "slug": "case-26"
@@ -797,6 +852,7 @@
  "fields": {
   "name": "case 27",
   "image": "products/case 27.png",
+  "price": 1.0,
   "description": "case 27 test description case 27",
   "section": 10,
   "slug": "case-27"
@@ -808,6 +864,7 @@
  "fields": {
   "name": "case 28",
   "image": "products/case 28.png",
+  "price": 1.0,
   "description": "case 28 test description case 28",
   "section": 10,
   "slug": "case-28"
@@ -819,6 +876,7 @@
  "fields": {
   "name": "case 29",
   "image": "products/case 29.png",
+  "price": 1.0,
   "description": "case 29 test description case 29",
   "section": 10,
   "slug": "case-29"
@@ -830,6 +888,7 @@
  "fields": {
   "name": "stripe 1",
   "image": "products/stripe 1.png",
+  "price": 1.0,
   "description": "stripe 1 test description stripe 1",
   "section": 9,
   "slug": "stripe-1"
@@ -841,6 +900,7 @@
  "fields": {
   "name": "stripe 2",
   "image": "products/stripe 2.png",
+  "price": 1.0,
   "description": "stripe 2 test description stripe 2",
   "section": 9,
   "slug": "stripe-2"
@@ -852,6 +912,7 @@
  "fields": {
   "name": "stripe 3",
   "image": "products/stripe 3.png",
+  "price": 1.0,
   "description": "stripe 3 test description stripe 3",
   "section": 9,
   "slug": "stripe-3"
@@ -863,6 +924,7 @@
  "fields": {
   "name": "stripe 4",
   "image": "products/stripe 4.png",
+  "price": 1.0,
   "description": "stripe 4 test description stripe 4",
   "section": 9,
   "slug": "stripe-4"
@@ -874,6 +936,7 @@
  "fields": {
   "name": "stripe 5",
   "image": "products/stripe 5.png",
+  "price": 1.0,
   "description": "stripe 5 test description stripe 5",
   "section": 9,
   "slug": "stripe-5"
@@ -885,6 +948,7 @@
  "fields": {
   "name": "stripe 6",
   "image": "products/stripe 6.png",
+  "price": 1.0,
   "description": "stripe 6 test description stripe 6",
   "section": 9,
   "slug": "stripe-6"
@@ -896,6 +960,7 @@
  "fields": {
   "name": "stripe 7",
   "image": "products/stripe 7.png",
+  "price": 1.0,
   "description": "stripe 7 test description stripe 7",
   "section": 9,
   "slug": "stripe-7"
@@ -907,6 +972,7 @@
  "fields": {
   "name": "stripe 8",
   "image": "products/stripe 8.png",
+  "price": 1.0,
   "description": "stripe 8 test description stripe 8",
   "section": 9,
   "slug": "stripe-8"
@@ -918,6 +984,7 @@
  "fields": {
   "name": "stripe 9",
   "image": "products/stripe 9.png",
+  "price": 1.0,
   "description": "stripe 9 test description stripe 9",
   "section": 9,
   "slug": "stripe-9"
@@ -929,6 +996,7 @@
  "fields": {
   "name": "stripe 10",
   "image": "products/stripe 10.png",
+  "price": 1.0,
   "description": "stripe 10 test description stripe 10",
   "section": 9,
   "slug": "stripe-10"
@@ -940,6 +1008,7 @@
  "fields": {
   "name": "stripe 11",
   "image": "products/stripe 11.png",
+  "price": 1.0,
   "description": "stripe 11 test description stripe 11",
   "section": 9,
   "slug": "stripe-11"
@@ -951,6 +1020,7 @@
  "fields": {
   "name": "stripe 12",
   "image": "products/stripe 12.png",
+  "price": 1.0,
   "description": "stripe 12 test description stripe 12",
   "section": 9,
   "slug": "stripe-12"
@@ -962,6 +1032,7 @@
  "fields": {
   "name": "stripe 13",
   "image": "products/stripe 13.png",
+  "price": 1.0,
   "description": "stripe 13 test description stripe 13",
   "section": 9,
   "slug": "stripe-13"
@@ -973,6 +1044,7 @@
  "fields": {
   "name": "stripe 14",
   "image": "products/stripe 14.png",
+  "price": 1.0,
   "description": "stripe 14 test description stripe 14",
   "section": 9,
   "slug": "stripe-14"
@@ -1231,8 +1303,98 @@
  "pk": 28,
  "fields": {
   "product": 49,
-  "count": 1,
+  "count": 111,
   "order": 13
+ }
+},
+{
+ "model": "shop.orderitems",
+ "pk": 29,
+ "fields": {
+  "product": 22,
+  "count": 1,
+  "order": 14
+ }
+},
+{
+ "model": "shop.orderitems",
+ "pk": 30,
+ "fields": {
+  "product": 24,
+  "count": 2,
+  "order": 14
+ }
+},
+{
+ "model": "shop.orderitems",
+ "pk": 31,
+ "fields": {
+  "product": 26,
+  "count": 1,
+  "order": 14
+ }
+},
+{
+ "model": "shop.orderitems",
+ "pk": 32,
+ "fields": {
+  "product": 1,
+  "count": 1,
+  "order": 14
+ }
+},
+{
+ "model": "shop.orderitems",
+ "pk": 33,
+ "fields": {
+  "product": 1,
+  "count": 2,
+  "order": 15
+ }
+},
+{
+ "model": "shop.orderitems",
+ "pk": 34,
+ "fields": {
+  "product": 3,
+  "count": 1,
+  "order": 15
+ }
+},
+{
+ "model": "shop.orderitems",
+ "pk": 35,
+ "fields": {
+  "product": 5,
+  "count": 1,
+  "order": 15
+ }
+},
+{
+ "model": "shop.orderitems",
+ "pk": 36,
+ "fields": {
+  "product": 2,
+  "count": 1,
+  "order": 16
+ }
+},
+{
+ "model": "shop.orderitems",
+ "pk": 37,
+ "fields": {
+  "product": 3,
+  "count": 1,
+  "order": 16
+ }
+},
+{
+ "model": "shop.orderitems",
+ "pk": 38,
+ "fields": {
+  "product": 1,
+  "count": 3,
+  "order": 17
  }
 },
 {
@@ -1806,11 +1968,29 @@
  }
 },
 {
+ "model": "registration.user",
+ "pk": 7,
+ "fields": {
+  "password": "pbkdf2_sha256$150000$qXsKcJRV9UEj$8qRvrhOyyY4ID9c6pUeMsGOA7Whd9XgwwAVMARzz2zc=",
+  "last_login": "2020-08-04T19:45:45.462Z",
+  "is_superuser": false,
+  "first_name": "",
+  "last_name": "",
+  "is_staff": false,
+  "is_active": true,
+  "date_joined": "2020-08-04T19:45:09.825Z",
+  "email": "Alina@alina.ru",
+  "groups": [],
+  "user_permissions": []
+ }
+},
+{
  "model": "shop.order",
  "pk": 5,
  "fields": {
   "date": "2020-07-21",
-  "user": 2
+  "user": 2,
+  "order_price": 1600.0
  }
 },
 {
@@ -1818,7 +1998,8 @@
  "pk": 6,
  "fields": {
   "date": "2020-07-03",
-  "user": 2
+  "user": 2,
+  "order_price": 600.0
  }
 },
 {
@@ -1826,7 +2007,8 @@
  "pk": 7,
  "fields": {
   "date": "2020-07-10",
-  "user": 2
+  "user": 2,
+  "order_price": 467.0
  }
 },
 {
@@ -1834,7 +2016,8 @@
  "pk": 8,
  "fields": {
   "date": "2020-07-22",
-  "user": 2
+  "user": 2,
+  "order_price": 5.0
  }
 },
 {
@@ -1842,7 +2025,8 @@
  "pk": 9,
  "fields": {
   "date": "2020-07-26",
-  "user": 2
+  "user": 2,
+  "order_price": 4.0
  }
 },
 {
@@ -1850,7 +2034,8 @@
  "pk": 10,
  "fields": {
   "date": "2020-07-27",
-  "user": 2
+  "user": 2,
+  "order_price": 0.0
  }
 },
 {
@@ -1858,7 +2043,8 @@
  "pk": 11,
  "fields": {
   "date": "2020-07-27",
-  "user": 2
+  "user": 2,
+  "order_price": 0.0
  }
 },
 {
@@ -1866,7 +2052,8 @@
  "pk": 12,
  "fields": {
   "date": "2020-07-27",
-  "user": 2
+  "user": 2,
+  "order_price": 9.0
  }
 },
 {
@@ -1874,7 +2061,44 @@
  "pk": 13,
  "fields": {
   "date": "2020-07-27",
-  "user": 2
+  "user": 2,
+  "order_price": 11.0
+ }
+},
+{
+ "model": "shop.order",
+ "pk": 14,
+ "fields": {
+  "date": "2020-08-04",
+  "user": 2,
+  "order_price": 104.0
+ }
+},
+{
+ "model": "shop.order",
+ "pk": 15,
+ "fields": {
+  "date": "2020-08-04",
+  "user": 2,
+  "order_price": 800.0
+ }
+},
+{
+ "model": "shop.order",
+ "pk": 16,
+ "fields": {
+  "date": "2020-08-04",
+  "user": 7,
+  "order_price": 800.0
+ }
+},
+{
+ "model": "shop.order",
+ "pk": 17,
+ "fields": {
+  "date": "2020-08-04",
+  "user": 2,
+  "order_price": 300.0
  }
 },
 {
@@ -2187,6 +2411,292 @@
   "object_repr": "test article1",
   "action_flag": 2,
   "change_message": "[{\"changed\": {\"fields\": [\"text\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 25,
+ "fields": {
+  "action_time": "2020-08-04T06:28:12.609Z",
+  "user": 2,
+  "content_type": 9,
+  "object_id": "1",
+  "object_repr": "phone 1",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"fields\": [\"price\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 26,
+ "fields": {
+  "action_time": "2020-08-04T06:28:21.728Z",
+  "user": 2,
+  "content_type": 9,
+  "object_id": "10",
+  "object_repr": "phone 10",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"fields\": [\"price\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 27,
+ "fields": {
+  "action_time": "2020-08-04T06:29:25.924Z",
+  "user": 2,
+  "content_type": 9,
+  "object_id": "2",
+  "object_repr": "phone 2",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"fields\": [\"price\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 28,
+ "fields": {
+  "action_time": "2020-08-04T06:54:07.672Z",
+  "user": 2,
+  "content_type": 9,
+  "object_id": "1",
+  "object_repr": "ONEPLUS 5T",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"fields\": [\"name\", \"image\", \"stock\", \"description\", \"slug\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 29,
+ "fields": {
+  "action_time": "2020-08-04T06:59:38.544Z",
+  "user": 2,
+  "content_type": 9,
+  "object_id": "2",
+  "object_repr": "HUAWEI P40 PRO+",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"fields\": [\"name\", \"image\", \"stock\", \"description\", \"slug\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 30,
+ "fields": {
+  "action_time": "2020-08-04T07:00:57.595Z",
+  "user": 2,
+  "content_type": 9,
+  "object_id": "3",
+  "object_repr": "SAMSUNG GALAXY S9+",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"fields\": [\"name\", \"price\", \"stock\", \"description\", \"slug\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 31,
+ "fields": {
+  "action_time": "2020-08-04T07:02:06.567Z",
+  "user": 2,
+  "content_type": 9,
+  "object_id": "4",
+  "object_repr": "APPLE IPHONE 8 PLUS",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"fields\": [\"name\", \"image\", \"price\", \"stock\", \"description\", \"slug\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 32,
+ "fields": {
+  "action_time": "2020-08-04T07:02:58.735Z",
+  "user": 2,
+  "content_type": 9,
+  "object_id": "5",
+  "object_repr": "VIVO Z1",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"fields\": [\"name\", \"image\", \"price\", \"stock\", \"description\", \"slug\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 33,
+ "fields": {
+  "action_time": "2020-08-04T07:04:02.908Z",
+  "user": 2,
+  "content_type": 9,
+  "object_id": "6",
+  "object_repr": "TECNO POUVOIR 4 PRO",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"fields\": [\"name\", \"image\", \"price\", \"stock\", \"description\", \"slug\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 34,
+ "fields": {
+  "action_time": "2020-08-04T07:07:55.246Z",
+  "user": 2,
+  "content_type": 9,
+  "object_id": "3",
+  "object_repr": "XIAOMI MI A3",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"fields\": [\"name\", \"description\", \"slug\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 35,
+ "fields": {
+  "action_time": "2020-08-04T07:08:07.629Z",
+  "user": 2,
+  "content_type": 9,
+  "object_id": "3",
+  "object_repr": "XIAOMI MI A3",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"fields\": [\"image\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 36,
+ "fields": {
+  "action_time": "2020-08-04T18:43:36.737Z",
+  "user": 2,
+  "content_type": 7,
+  "object_id": "13",
+  "object_repr": "admin@admin.ru - 2020-07-27",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"name\": \"order items\", \"object\": \"OrderItems object (28)\", \"fields\": [\"count\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 37,
+ "fields": {
+  "action_time": "2020-08-04T18:47:41.624Z",
+  "user": 2,
+  "content_type": 7,
+  "object_id": "13",
+  "object_repr": "admin@admin.ru - 2020-07-27",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"name\": \"order items\", \"object\": \"OrderItems object (28)\", \"fields\": [\"count\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 38,
+ "fields": {
+  "action_time": "2020-08-04T18:50:51.124Z",
+  "user": 2,
+  "content_type": 7,
+  "object_id": "13",
+  "object_repr": "admin@admin.ru - 2020-07-27",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"name\": \"order items\", \"object\": \"OrderItems object (28)\", \"fields\": [\"count\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 39,
+ "fields": {
+  "action_time": "2020-08-04T18:51:03.395Z",
+  "user": 2,
+  "content_type": 7,
+  "object_id": "13",
+  "object_repr": "admin@admin.ru - 2020-07-27",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"name\": \"order items\", \"object\": \"OrderItems object (28)\", \"fields\": [\"count\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 40,
+ "fields": {
+  "action_time": "2020-08-04T18:52:02.345Z",
+  "user": 2,
+  "content_type": 7,
+  "object_id": "13",
+  "object_repr": "admin@admin.ru - 2020-07-27",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"name\": \"order items\", \"object\": \"OrderItems object (28)\", \"fields\": [\"count\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 41,
+ "fields": {
+  "action_time": "2020-08-04T18:52:20.726Z",
+  "user": 2,
+  "content_type": 7,
+  "object_id": "13",
+  "object_repr": "admin@admin.ru - 2020-07-27",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"name\": \"order items\", \"object\": \"OrderItems object (28)\", \"fields\": [\"count\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 42,
+ "fields": {
+  "action_time": "2020-08-04T18:53:11.463Z",
+  "user": 2,
+  "content_type": 7,
+  "object_id": "13",
+  "object_repr": "admin@admin.ru - 2020-07-27",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"name\": \"order items\", \"object\": \"OrderItems object (28)\", \"fields\": [\"count\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 43,
+ "fields": {
+  "action_time": "2020-08-04T18:53:25.615Z",
+  "user": 2,
+  "content_type": 7,
+  "object_id": "13",
+  "object_repr": "admin@admin.ru - 2020-07-27",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"name\": \"order items\", \"object\": \"OrderItems object (28)\", \"fields\": [\"count\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 44,
+ "fields": {
+  "action_time": "2020-08-04T18:58:56.906Z",
+  "user": 2,
+  "content_type": 7,
+  "object_id": "13",
+  "object_repr": "admin@admin.ru - 2020-07-27",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"name\": \"order items\", \"object\": \"OrderItems object (28)\", \"fields\": [\"count\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 45,
+ "fields": {
+  "action_time": "2020-08-04T18:59:08.823Z",
+  "user": 2,
+  "content_type": 7,
+  "object_id": "13",
+  "object_repr": "admin@admin.ru - 2020-07-27",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"name\": \"order items\", \"object\": \"OrderItems object (28)\", \"fields\": [\"count\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 46,
+ "fields": {
+  "action_time": "2020-08-04T18:59:20.508Z",
+  "user": 2,
+  "content_type": 7,
+  "object_id": "13",
+  "object_repr": "admin@admin.ru - 2020-07-27",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"name\": \"order items\", \"object\": \"OrderItems object (28)\", \"fields\": [\"count\"]}}]"
  }
 }
 ]

@@ -63,12 +63,14 @@ def cart_view(request):
     cart = dict(request.session.get('cart', {}))
 
     sum_items = sum(cart.values())
-    items = Product.objects.filter(slug__in=cart.keys())
+    selected_products = Product.objects.filter(slug__in=cart.keys())
     # add product_name to the cart variable
-    for i in items:
-        cart[i.slug] = {"product_name": i.name, "count": cart[i.slug]}
+    order_sum = 0
+    for p in selected_products:
+        order_sum += p.price * cart[p.slug]
+        cart[p.slug] = {"product_name": p.name, "product_price": p.price, "count": cart[p.slug]}
 
-    context = {"items": cart, 'sum': sum_items}
+    context = {"items": cart, 'sum': order_sum}
 
     return render(request, template_name=template, context=context)
 
@@ -102,6 +104,7 @@ class CreateOrderView(View):
                 OrderItems.objects.create(product=Product.objects.get(slug=product_in_cart_slug), count=count,
                                           order=order)
 
+            order.calc_order_price()
             request.session['cart'] = {}
 
         red = redirect("/")
