@@ -173,8 +173,8 @@
   "slug": "gadgets",
   "parent": null,
   "lft": 1,
-  "rght": 10,
-  "tree_id": 4,
+  "rght": 6,
+  "tree_id": 5,
   "level": 0
  }
 },
@@ -186,22 +186,9 @@
   "slug": "phones",
   "parent": 3,
   "lft": 2,
-  "rght": 5,
-  "tree_id": 4,
+  "rght": 3,
+  "tree_id": 5,
   "level": 1
- }
-},
-{
- "model": "shop.section",
- "pk": 5,
- "fields": {
-  "name": "SuperPhones",
-  "slug": "superphones",
-  "parent": 4,
-  "lft": 3,
-  "rght": 4,
-  "tree_id": 4,
-  "level": 2
  }
 },
 {
@@ -211,23 +198,10 @@
   "name": "Watches",
   "slug": "watches",
   "parent": 3,
-  "lft": 6,
-  "rght": 9,
-  "tree_id": 4,
+  "lft": 4,
+  "rght": 5,
+  "tree_id": 5,
   "level": 1
- }
-},
-{
- "model": "shop.section",
- "pk": 7,
- "fields": {
-  "name": "Black Watches",
-  "slug": "black-watches",
-  "parent": 6,
-  "lft": 7,
-  "rght": 8,
-  "tree_id": 4,
-  "level": 2
  }
 },
 {
@@ -238,8 +212,8 @@
   "slug": "accessories",
   "parent": null,
   "lft": 1,
-  "rght": 8,
-  "tree_id": 3,
+  "rght": 6,
+  "tree_id": 4,
   "level": 0
  }
 },
@@ -251,8 +225,8 @@
   "slug": "watch-stripes",
   "parent": 8,
   "lft": 4,
-  "rght": 7,
-  "tree_id": 3,
+  "rght": 5,
+  "tree_id": 4,
   "level": 1
  }
 },
@@ -265,21 +239,8 @@
   "parent": 8,
   "lft": 2,
   "rght": 3,
-  "tree_id": 3,
+  "tree_id": 4,
   "level": 1
- }
-},
-{
- "model": "shop.section",
- "pk": 13,
- "fields": {
-  "name": "3d level",
-  "slug": "3d-level",
-  "parent": 9,
-  "lft": 5,
-  "rght": 6,
-  "tree_id": 3,
-  "level": 2
  }
 },
 {
@@ -1393,7 +1354,7 @@
  "pk": 38,
  "fields": {
   "product": 1,
-  "count": 3,
+  "count": 1,
   "order": 17
  }
 },
@@ -2098,7 +2059,7 @@
  "fields": {
   "date": "2020-08-04",
   "user": 2,
-  "order_price": 300.0
+  "order_price": 100.0
  }
 },
 {
@@ -2697,6 +2658,201 @@
   "object_repr": "admin@admin.ru - 2020-07-27",
   "action_flag": 2,
   "change_message": "[{\"changed\": {\"name\": \"order items\", \"object\": \"OrderItems object (28)\", \"fields\": [\"count\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 47,
+ "fields": {
+  "action_time": "2020-08-05T17:27:01.503Z",
+  "user": 2,
+  "content_type": 7,
+  "object_id": "17",
+  "object_repr": "admin@admin.ru - 2020-08-04",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"name\": \"order items\", \"object\": \"OrderItems object (38)\", \"fields\": [\"count\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 48,
+ "fields": {
+  "action_time": "2020-08-05T17:34:53.972Z",
+  "user": 2,
+  "content_type": 7,
+  "object_id": "17",
+  "object_repr": "admin@admin.ru - 2020-08-04",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"name\": \"order items\", \"object\": \"OrderItems object (38)\", \"fields\": [\"count\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 49,
+ "fields": {
+  "action_time": "2020-08-05T17:39:52.396Z",
+  "user": 2,
+  "content_type": 7,
+  "object_id": "17",
+  "object_repr": "admin@admin.ru - 2020-08-04",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"name\": \"order items\", \"object\": \"OrderItems object (38)\", \"fields\": [\"count\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 50,
+ "fields": {
+  "action_time": "2020-08-05T17:45:23.938Z",
+  "user": 2,
+  "content_type": 7,
+  "object_id": "17",
+  "object_repr": "admin@admin.ru - 2020-08-04",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"name\": \"order items\", \"object\": \"OrderItems object (38)\", \"fields\": [\"count\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 51,
+ "fields": {
+  "action_time": "2020-08-05T17:45:49.681Z",
+  "user": 2,
+  "content_type": 7,
+  "object_id": "17",
+  "object_repr": "admin@admin.ru - 2020-08-04",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"name\": \"order items\", \"object\": \"OrderItems object (38)\", \"fields\": [\"count\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 52,
+ "fields": {
+  "action_time": "2020-08-05T17:46:36.830Z",
+  "user": 2,
+  "content_type": 7,
+  "object_id": "17",
+  "object_repr": "admin@admin.ru - 2020-08-04",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"name\": \"order items\", \"object\": \"OrderItems object (38)\", \"fields\": [\"count\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 53,
+ "fields": {
+  "action_time": "2020-08-05T17:46:49.671Z",
+  "user": 2,
+  "content_type": 7,
+  "object_id": "17",
+  "object_repr": "admin@admin.ru - 2020-08-04",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"name\": \"order items\", \"object\": \"OrderItems object (38)\", \"fields\": [\"count\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 54,
+ "fields": {
+  "action_time": "2020-08-05T18:37:11.848Z",
+  "user": 2,
+  "content_type": 8,
+  "object_id": "13",
+  "object_repr": "3d-level1",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"fields\": [\"name\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 55,
+ "fields": {
+  "action_time": "2020-08-05T18:57:09.274Z",
+  "user": 2,
+  "content_type": 8,
+  "object_id": "13",
+  "object_repr": "3d-level117",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"fields\": [\"name\", \"parent\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 56,
+ "fields": {
+  "action_time": "2020-08-05T18:59:29.809Z",
+  "user": 2,
+  "content_type": 8,
+  "object_id": "13",
+  "object_repr": "3d-level117",
+  "action_flag": 2,
+  "change_message": "[]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 57,
+ "fields": {
+  "action_time": "2020-08-05T18:59:37.889Z",
+  "user": 2,
+  "content_type": 8,
+  "object_id": "13",
+  "object_repr": "3d-level117",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"fields\": [\"parent\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 58,
+ "fields": {
+  "action_time": "2020-08-05T19:01:52.319Z",
+  "user": 2,
+  "content_type": 8,
+  "object_id": "13",
+  "object_repr": "3d-level117",
+  "action_flag": 2,
+  "change_message": "[{\"changed\": {\"fields\": [\"parent\"]}}]"
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 59,
+ "fields": {
+  "action_time": "2020-08-05T19:03:17.738Z",
+  "user": 2,
+  "content_type": 8,
+  "object_id": "13",
+  "object_repr": "3d-level117",
+  "action_flag": 3,
+  "change_message": ""
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 60,
+ "fields": {
+  "action_time": "2020-08-05T19:03:31.999Z",
+  "user": 2,
+  "content_type": 8,
+  "object_id": "5",
+  "object_repr": "superphones",
+  "action_flag": 3,
+  "change_message": ""
+ }
+},
+{
+ "model": "admin.logentry",
+ "pk": 61,
+ "fields": {
+  "action_time": "2020-08-05T19:03:39.559Z",
+  "user": 2,
+  "content_type": 8,
+  "object_id": "7",
+  "object_repr": "black-watches",
+  "action_flag": 3,
+  "change_message": ""
  }
 }
 ]

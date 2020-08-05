@@ -6,6 +6,9 @@ from django.db.models import Sum, F, FloatField
 from django.template.defaultfilters import slugify
 from mptt.models import MPTTModel, TreeForeignKey
 
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+
 from registration.models import User
 
 
@@ -73,3 +76,10 @@ class Order(models.Model):
             'total'] or 0
         self.save()
         return None
+
+
+@receiver(post_save, sender=OrderItems, weak=False)
+def my_handler(sender, **kwargs):
+    order_item = kwargs.get('instance', None)
+    if order_item:
+        order_item.order.calc_order_price()

@@ -46,10 +46,10 @@
                 {% else %}
                     <a class="dropdown-item" href="{% url "shop:catalog_view" catalog_slug=node.slug %}">
                         {{ node.name }}</a>
-{#                    <a class="dropdown-item" href="{% url "shop:catalog_view" catalog_slug=node.slug %}">#}
-{#                        {{ node.name }}#}
-{#                    </a>#}
-{#                    {{ children }}#}
+                    {#                    <a class="dropdown-item" href="{% url "shop:catalog_view" catalog_slug=node.slug %}">#}
+                    {#                        {{ node.name }}#}
+                    {#                    </a>#}
+                    {#                    {{ children }}#}
                 {% endif %}
             {% endrecursetree %}
         </ul>
